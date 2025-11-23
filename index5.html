@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vida Marina Sostenible | Agenda 2030</title>
+ 
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+
+
+  <style>
+    :root {
+      --azul-profundo: #011f4b;
+      --azul-marino: #03396c;
+      --azul-claro: #005b96;
+      --turquesa: #00b4d8;
+      --aguamarina: #90e0ef;
+      --coral: #ff7b54;
+      --arena: #eaf9ff;
+      --texto: #022b3a;
+    }
+
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--arena);
+      color: var(--azul-profundo);
+      line-height: 1.6;
+    }
+
+
+    /* ==== ENCABEZADO ==== */
+    header {
+      background: linear-gradient(135deg, var(--azul-profundo), var(--turquesa));
+      color: var(--blanco);
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://www.transparenttextures.com/patterns/waves.png");
+      opacity: 0.08;
+      animation: moveWaves 12s linear infinite;
+    }
+
+
+    @keyframes moveWaves {
+      from { background-position: 0 0; }
+      to { background-position: 100% 0; }
+    }
+
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      letter-spacing: 2px;
+    }
+
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 15px;
+      opacity: 0.95;
+    }
+
+
+    /* ==== NAV ==== */
+    nav {
+      background-color: var(--azul-brillante);
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      margin: 0 18px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+
+    nav a:hover {
+      color: var(--coral);
+    }
+
+
+    /* ==== SECCIONES ==== */
+    section {
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+
+    h2 {
+      font-size: 2em;
+      color: var(--azul-brillante);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+
+    h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      width: 50%;
+      background: var(--coral);
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+
+    /* ==== CARRUSEL ==== */
+    .carrusel {
+      position: relative;
+      max-width: 900px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+
+    .carrusel img {
+      width: 100%;
+      display: none;
+      height: 480px;
+      object-fit: cover;
+    }
+
+
+    .carrusel img.active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+
+    .carrusel .controles {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+
+    .carrusel button {
+      background-color: rgba(255,255,255,0.7);
+      border: none;
+      font-size: 2em;
+      color: var(--azul-profundo);
+      cursor: pointer;
+      border-radius: 50%;
+      transition: all 0.3s;
+      width: 45px;
+      height: 45px;
+    }
+
+
+    .carrusel button:hover {
+      background-color: var(--coral);
+      color: var(--blanco);
+    }
+
+
+    /* ==== PRODUCTOS ==== */
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+
+    .producto {
+      background-color: var(--blanco);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 300px;
+      overflow: hidden;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+
+    .producto:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+
+    .producto h3 {
+      color: var(--coral);
+      margin: 15px 0 10px;
+    }
+
+
+    .producto p {
+      padding: 0 20px 25px;
+      font-size: 0.95em;
+      color: #333;
+    }
+
+
+    /* ==== FOOTER ==== */
+    .footer-marino {
+  background: linear-gradient(to right, var(--azul-profundo), var(--azul-marino));
+  color: var(--aguamarina);
+  text-align: center;
+  padding: 25px 10px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 40px;
+  border-top: 4px solid var(--turquesa);
+}
+
+.footer-marino p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 140px;  /* puedes ajustar el tamaño */
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,180,216,0.4);
+}
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2em; }
+      .producto { width: 90%; }
+      .carrusel img { height: 300px; }
+    }
+    /* ==== BOTONES ESTILO MODERNO ==== */
+nav .btn {
+  background: #0077b6;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav .btn:hover {
+  background: #00b4d8;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+  <img src="logo.png" alt="Eco Mar Vida Submarina">
+</div>
+<h1>Vida Marina Sostenible</h1>
+    <p>Comprometidos con el Objetivo 14 de la Agenda 2030: conservar y utilizar sosteniblemente los océanos, mares y recursos marinos.</p>
+  </header>
+
+
+  <nav>
+  <a href="index.html" class="btn">Inicio</a>
+  <a href="https://www.canva.com/design/DAG1NawMDaI/ayoRMwoKbb45Uf0A2b92Jg/edit" class="btn" target="_blank">Canva</a>
+  <a href="index2.html" class="btn">Problematica</a>
+  <a href="index3.html" class="btn">Mision y Vision</a>
+  <a href="index4.html" class="btn">Campañas</a>
+  <a href="index5.html" class="btn">Productos</a>
+</nav>
+
+
+
+  <section id="inicio">
+    <h2>Protegiendo la Vida Marina</h2>
+    <p>
+      Los océanos son el corazón de nuestro planeta: regulan el clima, proveen alimento y sostienen una biodiversidad única.
+      Sin embargo, la contaminación y la sobreexplotación los amenazan.  
+      Esta iniciativa apoya el <strong>Objetivo 14 de la Agenda 2030</strong>, promoviendo prácticas y productos que cuidan nuestros mares.
+    Es por eso que decidimos hacer siertos productos que podrian ayudar al cambio de contaminacion al momento de la pesca.
+  Y pasar de mares contaminados por la pesca a un mar mas limpio.</p>
+
+
+    <!-- CARRUSEL DE IMÁGENES -->
+    <div class="carrusel">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80" class="active" alt="Océano azul profundo">
+      <img src="https://lasempresasverdes.com/wp-content/uploads/2024/06/captura-de-pantalla-2024-06-09-a-las-170812-1024x615.png" alt="Vida marina colorida">
+      <img src="https://www.nationalgeographic.com.es/medio/2022/06/07/coral-oceanos_5c22a240.jpg" alt="Corales vibrantes">
+      <div class="controles">
+        <button id="prev">&#10094;</button>
+        <button id="next">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="productos">
+    <h2>Productos Planeados</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PHvsk87-wtdg2nkCrolEHM8dKQ3RQjWi8A&s" alt="Estropajo de Luffa Natural">
+        <h3>Estropajos Naturales de Luffa</h3>
+        <p>Biodegradables y libres de plástico. Ideales para limpiar sin generar residuos que dañen la vida marina.</p>
+      </div>
+
+
+      <div class="producto">
+        <img src="https://img.kwcdn.com/product/fancy/8e1012e8-2767-4614-ae1e-a25b7ca8f7a2.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Cinta Adhesiva para Cuerdas de Pesca">
+        <h3>Cinta Adhesiva Ecológica</h3>
+        <p>Fabricada con materiales sostenibles y resistentes al agua salada. Reduce pérdidas y promueve la pesca responsable.</p>
+      </div>
+
+
+      <div class="producto">
+        <img src="https://m.media-amazon.com/images/I/71ddxS9RqJL._AC_UF894,1000_QL80_.jpg" alt="Linterna Submarina de Seguridad">
+        <h3>Linternas Submarinas</h3>
+        <p>Iluminación de bajo consumo para pescadores y buzos, aumentando la seguridad y minimizando el impacto ambiental.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="contacto" class="footer-marino">
+  <p>&copy; Agenda 2030 🌊 - Vida Marina | Mariel Jimenez Perez</p>
+</footer>
+
+
+  <!-- ==== SCRIPT DEL CARRUSEL ==== -->
+  <script>
+    const images = document.querySelectorAll('.carrusel img');
+    let index = 0;
+
+
+    document.getElementById('next').addEventListener('click', () => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    });
+
+
+    document.getElementById('prev').addEventListener('click', () => {
+      images[index].classList.remove('active');
+      index = (index - 1 + images.length) % images.length;
+      images[index].classList.add('active');
+    });
+
+
+    // Cambio automático cada 5 segundos
+    setInterval(() => {
+      images[index].classList.remove('active');
+      index = (index + 1) % images.length;
+      images[index].classList.add('active');
+    }, 5000);
+  </script>
+</body>
+</html>

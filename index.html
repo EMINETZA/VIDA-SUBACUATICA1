@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenda 2030 — Vida Submarina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      
+
+      --azul-profundo: #011f4b;
+      --azul-marino: #03396c;
+      --azul-claro: #005b96;
+      --turquesa: #00b4d8;
+      --aguamarina: #90e0ef;
+      --coral: #ff7b54;
+      --arena: #eaf9ff;
+      --texto: #022b3a;
+
+    }
+
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--texto);
+      background: linear-gradient(180deg, var(--aguamarina) 0%, var(--arena) 100%);
+      overflow-x: hidden;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--azul-profundo), var(--azul-claro));
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 140px;  /* puedes ajustar el tamaño */
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,180,216,0.4);
+}
+
+
+ nav {
+  display: flex;
+  gap: 25px; /* Espacio entre botones */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  background: var(--turquesa);
+  transform: translateY(-3px);
+}
+
+
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #a8eafc 0%, #b0e8f5 100%);
+    }
+
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+
+    .hero-text h1 {
+      font-size: 44px;
+      color: var(--azul-profundo);
+    }
+.hero-text p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #04384f;
+    }
+
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+
+    .btn-primary {
+      background: var(--azul-claro);
+      color: white;
+      box-shadow: 0 4px 12px rgba(0,91,150,0.4);
+    }
+
+
+    .btn-primary:hover { background: var(--azul-profundo); }
+
+
+    .btn-outline {
+      border: 2px solid var(--turquesa);
+      color: var(--azul-marino);
+    }
+
+
+    .btn-outline:hover {
+      background: var(--turquesa);
+      color: white;
+    }
+
+
+    .hero img {
+      width: 420px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+
+    section {
+      padding: 60px 40px;
+      background: white;
+    }
+
+
+    section:nth-child(even) {
+      background: #dff6ff;
+    }
+
+
+    h2 {
+      color: var(--azul-marino);
+      border-left: 6px solid var(--turquesa);
+      padding-left: 10px;
+    }
+
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+.feature {
+      background: var(--arena);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+
+    .feature:hover {
+      transform: translateY(-6px);
+      background: var(--aguamarina);
+    }
+
+
+    .feature img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+
+    footer {
+      background: var(--azul-profundo);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+
+
+
+    .wave {
+      position: relative;
+      height: 80px;
+      background: linear-gradient(to right, var(--azul-claro), var(--turquesa));
+      border-top-left-radius: 100% 40%;
+      border-top-right-radius: 100% 40%;
+      box-shadow: inset 0 -10px 20px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div class="logo">
+  <img src="logo.png" alt="Eco Mar Vida Submarina">
+</div>
+
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="https://www.canva.com/design/DAG1NawMDaI/ayoRMwoKbb45Uf0A2b92Jg/edit" target="_blank">Canva</a>
+    <a href="index2.html">Problematica</a>
+    <a href="index3.html">Mision y Vision</a>
+    <a href="index4.html">Campañas</a>
+    <a href="index5.html">Productos</a>
+  </nav>
+
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-text">
+      <h1>Vida Submarina — Agenda 2030</h1>
+      <p>Nuestro objetivo es buscar, conservar y usar de forma sostenible los océanos, mares y recursos marinos. Cuidar la vida submarina es vital para mantener el equilibrio ecológico del planeta.</p>
+      <a href="#acciones" class="btn btn-primary">Explorar más</a>
+      <a href="https://www.canva.com/design/DAG1NawMDaI/ayoRMwoKbb45Uf0A2b92Jg/edit" target="_blank" class="btn btn-outline">Ver diseño Canva</a>
+    </div>
+    <img src="https://www.portalambiental.com.mx/sites/default/files/media/image/2020/02/oceanos.jpg" alt="Océano azul">
+  </section>
+
+
+  <div class="wave"></div>
+
+
+  <section id="problemas">
+    <h2>Principales Problemas</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://volcanismandgeology.wordpress.com/wp-content/uploads/2023/03/contaminacion_agua.png" alt="Contaminación marina">
+        <h3>Contaminación marina</h3>
+        <p>Millones de toneladas de plástico terminan en los océanos cada año, afectando especies y ecosistemas.</p>
+      </div>
+
+<div class="feature">
+        <img src="https://delajusticia.com/wp-content/uploads/2012/09/pesca-arrastre.png" alt="Sobrepesca">
+        <h3>Sobrepesca</h3>
+        <p>La explotación excesiva de recursos pesqueros amenaza la biodiversidad marina.</p>
+      </div>
+      <div class="feature">
+        <img src="https://kamelathie.wordpress.com/wp-content/uploads/2014/06/sin-tc3adtulo.png" alt="Calentamiento global">
+        <h3>Calentamiento global</h3>
+        <p>El aumento de temperatura y acidificación afectan los arrecifes y la vida marina e incluso a sonas boscosas por la quema de estas</p>
+      </div>
+    </div>
+  </section>
+<section id="acciones">
+    <h2>Acciones para Proteger los Océanos</h2>
+    <div class="features">
+      <div class="feature">
+        <img src="https://s3.amazonaws.com/arc-wordpress-client-uploads/infobae-wp/wp-content/uploads/2019/01/18183508/limpieza-playas-Vida-Silvestre-2.jpeg" alt="Reducir el plástico">
+        <h3>Reducir el plástico</h3>
+        <p>Optar por materiales reutilizables y participar en limpiezas costeras.</p>
+      </div>
+      <div class="feature">
+        <img src="https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=800&q=60" alt="Educación marina">
+        <h3>Fomentar educación marina</h3>
+        <p>Promover la conciencia ambiental sobre el valor de los océanos y dar a conocer la importancia de los oceano</p>
+      </div>
+      <div class="feature">
+        <img src="https://www.cartv.es/thumbs/fullwidth/sostenible/iniciativas/Lucha%20contra%20los%20residuos%20pl%C3%A1sticos/oceanos-1.png?955b19ed14" alt="Políticas sostenibles">
+        <h3>Apoyar políticas sostenibles</h3>
+        <p>Impulsar leyes que protejan especies y ecosistemas marinos.</p>
+      </div>
+    </div>
+  </section>
+<footer>
+    <p>ECO MAR —🌊 Agenda 2030 — Vida Submarina (ODS 14) | Emiliano Netzahualcoyotl Ramos</p>
+  </footer>
+</body>
+</html>

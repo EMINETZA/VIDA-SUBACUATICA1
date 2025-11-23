@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda 2030 - Problemática</title>
+    <style>
+        :root {
+            --azul-profundo: #011f4b;
+            --azul-marino: #03396c;
+            --azul-claro: #005b96;
+            --turquesa: #00b4d8;
+            --aguamarina: #90e0ef;
+            --coral: #ff7b54;
+            --arena: #eaf9ff;
+            --texto: #022b3a;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--arena);
+            color: var(--texto);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--azul-profundo), var(--azul-marino));
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            position: relative;
+        }
+
+        .btn-inicio {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--turquesa);
+            color: white;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-inicio:hover {
+            background: var(--coral);
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: var(--azul-claro);
+            border-left: 6px solid var(--turquesa);
+            padding-left: 10px;
+            font-size: 1.8rem;
+        }
+
+       .problematica {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.problema {
+    background: white;
+    border-radius: 14px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    border: 4px solid var(--aguamarina);
+}
+
+.problema:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.problema img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.problema h3 {
+    background: var(--aguamarina);
+    margin: 0;
+    padding: 12px;
+    font-size: 1.3rem;
+    border-bottom: 4px solid var(--turquesa);
+    text-align: center;
+}
+
+.problema p {
+    padding: 1rem 1.1rem 1.5rem 1.1rem;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--azul-marino);
+            color: white;
+            margin-top: 3rem;
+        }
+        nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+nav a {
+  background: var(--azul-claro);
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav a:hover {
+  background: var(--turquesa);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 140px;  /* puedes ajustar el tamaño */
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,180,216,0.4);
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+         
+ <div class="logo">
+  <img src="logo.png" alt="Eco Mar Vida Submarina">
+</div>
+
+        <h1>Agenda 2030</h1>
+        <p>Construyendo un futuro sostenible para todos</p>
+    </header>
+
+   <nav>
+  <a href="index.html" class="btn">Inicio</a>
+  <a href="https://www.canva.com/design/DAG1NawMDaI/ayoRMwoKbb45Uf0A2b92Jg/edit" class="btn" target="_blank">Canva</a>
+  <a href="index2.html" class="btn">Problematica</a>
+  <a href="index3.html" class="btn">Mision y Vision</a>
+  <a href="index4.html" class="btn">Campañas</a>
+  <a href="index5.html" class="btn">Productos</a>
+</nav>
+
+
+    
+    <section>
+        <h2>Problemática Global</h2>
+        <p>La Agenda 2030 plantea 17 Objetivos de Desarrollo Sostenible (ODS) para enfrentar los desafíos que amenazan el equilibrio del planeta, la equidad social y la prosperidad económica. Sin embargo, aún existen grandes problemáticas que dificultan su cumplimiento.</p>
+        
+        <div class="problema">
+    <h3>🌍 Cambio Climático</h3>
+    <img src="https://content.nationalgeographic.com.es/medio/2022/11/02/cambio-climatico-antropogenico_4253f323_1280x900.jpg" 
+         alt="Cambio Climático"
+         style="width: 100%; max-width: 250px; border-radius: 10px; display: block; margin: 0 auto 10px auto;">
+    <p>El aumento de las temperaturas globales genera fenómenos extremos, pérdida de biodiversidad
+       y desastres naturales que afectan principalmente a las comunidades más vulnerables.</p>
+</div>
+
+
+            <div class="problema">
+    <h3>💧 Escasez de Agua</h3>
+    <img src="https://www.supergutierrez.com/img_blog/escasez_de_agua_que_es_causas_y_consecuencias_2180_orig.jpg" 
+         alt="Escasez de agua" 
+         style="width: 100%; max-width: 250px; border-radius: 10px; display: block; margin: 0 auto 10px auto;">
+    <p>Más de 2 mil millones de personas viven sin acceso a agua potable. La contaminación y la sobreexplotación de los recursos hídricos agravan esta crisis.</p>
+</div>
+
+
+            <div class="problema">
+  <h3>🍞 Pobreza y Hambre</h3>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBsrJXwKAfH2Aw-ZXyBSU99H-SCaeKSEjG4Q&s" 
+       alt="Pobreza y Hambre" 
+       style="width: 100%; max-width: 250px; border-radius: 10px; display: block; margin: 0 auto 10px auto;">
+  <p>A pesar de los avances, millones de personas continúan viviendo en condiciones de pobreza extrema y desnutrición.</p>
+</div>
+
+           <div class="problema">
+  <h3>🏭 Desigualdad Económica</h3>
+  <img src="https://st3.depositphotos.com/1420268/15891/v/450/depositphotos_158911562-stock-illustration-weight-scale-between-rich-man.jpg"
+       alt="Desigualdad económica"
+       style="width: 100%; max-width: 250px; border-radius: 10px; display: block; margin: 0 auto 10px auto;">
+  <p>La concentración de riqueza, la falta de empleo digno y las brechas de género continúan siendo obstáculos para un desarrollo justo y equitativo.</p>
+</div>
+
+        </div>
+    </section>
+
+    <footer>
+        <small>ECO MAR — © 2025 Agenda 2030 | Daniela Zoe Gabino Aguilar </small>
+    </footer>
+</body>
+</html>

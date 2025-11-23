@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoMar | Objetivo 14: Vida Submarina</title>
+
+  <!-- Fuente y AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <style>
+    /* 🎨 Paleta marina */
+    :root {
+      --azul-profundo: #011f4b;
+      --azul-marino: #03396c;
+      --azul-claro: #005b96;
+      --turquesa: #00b4d8;
+      --aguamarina: #90e0ef;
+      --coral: #ff7b54;
+      --arena: #eaf9ff;
+      --texto: #022b3a;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--arena);
+      color: var(--texto);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    header {
+      position: relative;
+      text-align: center;
+      color: white;
+      height: 90vh;
+      background: linear-gradient(to right, rgba(1,31,75,0.7), rgba(0,91,150,0.7)),
+                  url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    header h1 { font-size: 3rem; margin: 0; }
+    header p { font-size: 1.2rem; margin-top: .5rem; }
+
+    /* OLAS */
+    .wave {
+      position: absolute;
+      bottom: 0;
+      width: 200%;
+      height: 100px;
+      background: url('https://svgshare.com/i/13uh.svg') repeat-x;
+      background-size: contain;
+      animation: waveMove 8s linear infinite;
+    }
+
+    @keyframes waveMove {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* NAV */
+    nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+}
+
+nav .btn {
+  background: #0077b6;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.35s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav .btn:hover {
+  background: #00b4d8;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+    section { padding: 4rem 10%; }
+
+    /* TITULOS */
+    .intro h2, h2 {
+      color: var(--azul-claro);
+      font-size: 2.2rem;
+    }
+
+    /* BOTONES */
+    .btn {
+      display: inline-block;
+      background-color: var(--turquesa);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .btn:hover { background: var(--coral); transform: scale(1.05); }
+
+    /* CARRUSEL */
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      max-width: 500px;
+      margin: 3rem auto;
+    }
+
+    .slides { display: flex; transition: transform 0.8s ease-in-out; }
+    .slides img { width: 100%; object-fit: cover; }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background: rgba(0,0,0,0.4);
+      color: white;
+      border: none;
+      padding: 1rem;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    /* TARJETAS */
+    .objetivos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--aguamarina);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-8px); }
+    .card img { width: 100%; height: 190px; object-fit: cover; }
+
+    .card-content { padding: 1.5rem; }
+
+    /* IMPACTO */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .stat {
+      background: white;
+      border-left: 5px solid var(--turquesa);
+      border-radius: 10px;
+      padding: 2rem;
+      width: 240px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .stat h3 { color: var(--azul-marino); }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--azul-profundo);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    /* === Estilos exclusivos del logo === */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 140px;  /* puedes ajustar el tamaño */
+  width: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,180,216,0.4);
+}
+
+    footer a { color: var(--turquesa); }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      .carousel-buttons button { padding: .7rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+  <img src="logo.png" alt="Eco Mar Vida Submarina">
+</div>
+    <h1 data-aos="fade-down">EcoMar Campañas</h1>
+    <p data-aos="fade-up">Protegiendo la vida submarina</p>
+    <div class="wave"></div>
+    
+
+  </header>
+<nav>
+  <a href="index.html" class="btn">Inicio</a>
+  <a href="https://www.canva.com/design/DAG1NawMDaI/ayoRMwoKbb45Uf0A2b92Jg/edit" class="btn" target="_blank">Canva</a>
+  <a href="index2.html" class="btn">Problematica</a>
+  <a href="index3.html" class="btn">Mision y Vision</a>
+  <a href="index4.html" class="btn">Campañas</a>
+  <a href="index5.html" class="btn">Productos</a>
+</nav>
+
+
+  <section id="inicio" class="intro">
+    <h2 data-aos="zoom-in">Protejamos la vida bajo el agua</h2>
+    <p data-aos="fade-up">
+      El Objetivo de Desarrollo Sostenible 14 busca conservar y utilizar sosteniblemente los océanos, mares y recursos marinos.
+      Juntos podemos reducir la contaminación marina, proteger los ecosistemas y fomentar el uso responsable del océano.
+    </p>
+    <a href="#proyectos" class="btn" data-aos="fade-up">Conoce nuestras campañas</a>
+
+    <!-- Carrusel -->
+    <div class="carousel" data-aos="fade-up">
+      <div class="slides" id="slides">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Sustainable_Development_Goal-es-04.jpg">
+        <img src="https://limpiezademalaga.es/wp-content/uploads/2021/09/Disen%CC%83o-sin-ti%CC%81tulo-1.jpg">
+        <img src="https://laderasur.com/wp-content/uploads/2020/10/c-ian-dyball---shutterstock.gif">
+      </div>
+      <div class="carousel-buttons">
+        <button onclick="moveSlide(-1)">❮</button>
+        <button onclick="moveSlide(1)">❯</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2 data-aos="fade-up">Nuestras Campañas</h2>
+
+    <div class="objetivos">
+      <div class="card" data-aos="fade-right">
+        <img src="https://png.pngtree.com/background/20250516/original/pngtree-sunrise-beach-cleanup-volunteers-collecting-trash-in-plastic-bags-for-stock-picture-image_16038611.jpg">
+        <div class="card-content">
+          <h3>Campaña "Actúa Ahora"</h3>
+          <p>Motiva a tomar acciones individuales en favor de los ODS, incluyendo reducir plásticos y limpiar playas.</p>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://www.shutterstock.com/image-photo/plastic-waste-lake-ocean-pollution-600nw-2495236013.jpg">
+        <div class="card-content">
+          <h3>Programa PNUMA</h3>
+          <p>Busca reducir la contaminación marina y fomentar cambios sostenibles en industrias y comunidades.</p>
+        </div>
+      </div>
+
+      <div class="card" data-aos="fade-up">
+        <img src="https://cdn.euroinnova.edu.es/img/subidasEditor/animales%20marinos-1597750093.jpg">
+        <div class="card-content">
+          <h3>Lucha contra pesca ilegal</h3>
+          <p>Campañas para detener la pesca no reglamentada que daña los ecosistemas oceánicos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impacto" class="intro">
+    <h2 data-aos="fade-up">Impacto Global</h2>
+
+    <div class="stats">
+      <div class="stat" data-aos="zoom-in"><h3>97%</h3><p>Del agua del planeta está en los océanos.</p></div>
+      <div class="stat" data-aos="zoom-in"><h3>17M</h3><p>Toneladas de plástico llegan al mar anualmente.</p></div>
+      <div class="stat" data-aos="zoom-in"><h3>30%</h3><p>Mayor acidez oceánica desde la era preindustrial.</p></div>
+    </div>
+  </section>
+
+  <section id="participa" class="intro">
+    <h2 data-aos="fade-up">Únete al cambio</h2>
+    <p data-aos="fade-up">
+      Cada acción cuenta: desde reducir plástico hasta participar en limpiezas costeras.
+      Súmate y sé parte de un futuro más azul.</p>
+     <p> Ecomar el cambio de los oceanos.
+    </p>
+    <a href="#contacto" class="btn" data-aos="fade-up">Contáctanos</a>
+  </section>
+
+  <footer id="contacto">
+    <p>© 2025 EcoMar | Natalia Sanchez Barragan</p>
+    <p>Visita <a href="https://www.un.org/sustainabledevelopment/es/oceans/" target="_blank">ODS14 ONU</a></p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    let index = 0;
+    function moveSlide(step) {
+      const slides = document.getElementById("slides");
+      const total = slides.children.length;
+      index = (index + step + total) % total;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+  </script>
+</body>
+</html>
